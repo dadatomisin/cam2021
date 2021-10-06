@@ -1,2 +1,9 @@
 # cam2021
 Code Base for Dissertation 
+In this dissertation, we consider how multiple agents learn to share in a resource-constrained environment using reinforcement learning for multiple information structures. The term information structure here refers to the type of information that gets shared between agents as well as the employed communication protocol and network topology as seen in Zhang et al (https://github.com/cts198859/deeprl_network). In this dissertation, we have created a mini-grid environment where multiple agents share access to a pool of available electricity where the price is affected by the quantity demanded. 
+
+The core research contributions of this work are:
+1. The formulation of the problem of resource distribution amongst multiple agents in an OR (Operations Research) framework, as a multi-agent multi-period newsvendor problem. In this framework batteries are treated as warehouses and electricity ‘inventory'. In this framework, the question then becomes how much ‘inventory’ (electricity) to store given knowledge of the stochastic nature of demand for electricity and the economic cost of failing to meet demand.
+2. The implementation of baseline heuristics to establish performance benchmarks and the modification of the existing closed-form solution to the single-period, single-agent newsvendor problem for multiple agents, periods and variable inventory cost.
+3. Implementation of MARL for seven different information structures and the evaluation of the resulting learned policies of the trained agents in comparison to the established baselines.
+4. Implementation of modified MARL approach wherein agents are in part ‘coached’ by a Gaussian Process (GP) trained to predict ‘good’ actions from a given state space. This 'coaching' comes in the form of a penalty in the reward function.
